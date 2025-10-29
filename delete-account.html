@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delete your FocusPal account and personal data. We give you full control over your information with permanent account deletion.">
+  <meta name="keywords" content="FocusPal, delete account, data deletion, privacy, GDPR, user data">
+  <meta name="robots" content="index, follow">
+  <title>Delete Your FocusPal Account | Data Deletion Request</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.7;
+      color: #2d3748;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+    .content {
+      padding: 40px;
+    }
+    .intro {
+      background: #f7fafc;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      border-left: 5px solid #667eea;
+    }
+    .intro p {
+      font-size: 1.05em;
+      color: #4a5568;
+      line-height: 1.7;
+    }
+    h2 {
+      color: #2d3748;
+      font-size: 1.6em;
+      margin: 35px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .icon {
+      font-size: 1.3em;
+    }
+    .method-card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+    .method-card:hover {
+      border-color: #667eea;
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+      transform: translateY(-2px);
+    }
+    .method-card h3 {
+      color: #667eea;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .steps {
+      list-style: none;
+      counter-reset: step-counter;
+    }
+    .steps li {
+      counter-increment: step-counter;
+      position: relative;
+      padding-left: 45px;
+      margin-bottom: 18px;
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+    .steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #667eea;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+    .email-link {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+    .email-link:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+    }
+    .warning-box {
+      background: #fff5f5;
+      border: 2px solid #fc8181;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    .warning-box h3 {
+      color: #c53030;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .warning-box ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .warning-box li {
+      padding: 10px 0 10px 30px;
+      position: relative;
+      color: #742a2a;
+      font-size: 1.05em;
+    }
+    .warning-box li::before {
+      content: "✗";
+      position: absolute;
+      left: 0;
+      color: #fc8181;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .info-box {
+      background: #ebf8ff;
+      border: 2px solid #4299e1;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    .info-box h3 {
+      color: #2c5282;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-box ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .info-box li {
+      padding: 10px 0 10px 30px;
+      position: relative;
+      color: #2c5282;
+      font-size: 1.05em;
+    }
+    .info-box li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4299e1;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+    .timeline {
+      background: #f7fafc;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 25px 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-icon {
+      background: #667eea;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      flex-shrink: 0;
+    }
+    .timeline-content h4 {
+      color: #2d3748;
+      margin-bottom: 5px;
+      font-size: 1.1em;
+    }
+    .timeline-content p {
+      color: #718096;
+      font-size: 0.95em;
+    }
+    .faq {
+      margin-top: 40px;
+    }
+    .faq-item {
+      margin-bottom: 25px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 20px;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      color: #2d3748;
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    .faq-answer {
+      color: #4a5568;
+      line-height: 1.7;
+      padding-left: 20px;
+    }
+    .footer {
+      background: #f7fafc;
+      padding: 30px 40px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .footer p {
+      color: #718096;
+      margin-bottom: 15px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: #5568d3;
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        border-radius: 12px;
+      }
+      .header {
+        padding: 30px 20px;
+      }
+      .header h1 {
+        font-size: 1.8em;
+      }
+      .content {
+        padding: 25px 20px;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+      .steps li {
+        font-size: 1em;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🧠 Delete Your FocusPal Account</h1>
+      <p>You have full control over your data and privacy</p>
+    </div>
+
+    <div class="content">
+      <div class="intro">
+        <p><strong>We respect your right to privacy and data control.</strong> You can permanently delete your FocusPal account and all associated personal data at any time. This page explains how the deletion process works and what happens to your data.</p>
+      </div>
+
+      <h2><span class="icon">📱</span>Method 1: Delete In-App (Recommended)</h2>
+      <div class="method-card">
+        <h3>🎯 Quick & Easy Account Deletion</h3>
+        <p>The fastest way to delete your account is directly through the FocusPal app:</p>
+        <ol class="steps">
+          <li>Open the <strong>FocusPal</strong> mobile app</li>
+          <li>Navigate to your <strong>Profile</strong> tab</li>
+          <li>Go to <strong>Settings → Security & Privacy → Delete Account</strong></li>
+          <li>Read the confirmation message carefully</li>
+          <li>Enter your password to verify your identity</li>
+          <li>Tap <strong>"Permanently Delete Account"</strong></li>
+          <li>Confirm your final decision</li>
+        </ol>
+        <p style="margin-top: 15px; color: #4a5568;">✓ Your account and all data will be deleted immediately from active servers.</p>
+      </div>
+
+      <h2><span class="icon">📧</span>Method 2: Email Request</h2>
+      <div class="method-card">
+        <h3>✉️ Can't Access the App?</h3>
+        <p>If you're unable to log into the app or prefer email, you can submit a deletion request:</p>
+        <ol class="steps">
+          <li>Send an email to <strong>support@kamartec.online</strong></li>
+          <li>Use the subject line: <strong>"Account Deletion Request"</strong></li>
+          <li>Include your registered email address and username (if possible)</li>
+          <li>Briefly explain your request (optional)</li>
+        </ol>
+        <a href="mailto:support@kamartec.com?subject=Account%20Deletion%20Request" class="email-link">📨 Send Deletion Request</a>
+        <p style="margin-top: 20px; color: #4a5568;"><strong>Response time:</strong> We will process your request and confirm deletion within <strong>3 business days</strong> (usually much faster).</p>
+      </div>
+
+      <h2><span class="icon">⏱️</span>What Happens After Deletion?</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">1</div>
+          <div class="timeline-content">
+            <h4>Immediate (0-5 minutes)</h4>
+            <p>Your account is deactivated and you're logged out from all devices. You can no longer access FocusPal features.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">2</div>
+          <div class="timeline-content">
+            <h4>Within 24 hours</h4>
+            <p>All personal data is removed from our primary databases, including your profile, focus sessions, tasks, notes, and uploaded files.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">3</div>
+          <div class="timeline-content">
+            <h4>Within 14-30 days</h4>
+            <p>Backup copies and cached data are permanently deleted from all systems. After this period, recovery is impossible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>📋 What Data Gets Deleted</h3>
+        <ul>
+          <li>Account information (name, email, username, profile photo)</li>
+          <li>All focus session history and productivity statistics</li>
+          <li>Tasks, goals, and reminders</li>
+          <li>Notes and study materials</li>
+          <li>Uploaded files (PDFs, images, documents)</li>
+          <li>AI conversation history</li>
+          <li>App preferences and settings</li>
+          <li>Notification tokens and device information</li>
+        </ul>
+      </div>
+
+      <div class="warning-box">
+        <h3>⚠️ Important Things to Know</h3>
+        <ul>
+          <li>Account deletion is <strong>permanent and irreversible</strong></li>
+          <li>You cannot recover your account, data, or progress after deletion</li>
+          <li>Any active subscriptions must be cancelled separately through your app store</li>
+          <li>Some anonymized analytics data may be retained for legal compliance</li>
+          <li>If you delete your account by mistake, you'll need to create a new account from scratch</li>
+        </ul>
+      </div>
+
+      <div class="faq">
+        <h2><span class="icon">❓</span>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">Q: Can I temporarily deactivate my account instead?</div>
+          <div class="faq-answer">A: Currently, we only offer permanent deletion. However, you can simply stop using the app and your data will remain saved until you decide to delete your account.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Will I get a confirmation when my account is deleted?</div>
+          <div class="faq-answer">A: Yes! If you delete via email, we'll send a confirmation email once the deletion is complete. In-app deletions show an immediate confirmation message.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Can I download my data before deleting?</div>
+          <div class="faq-answer">A: Yes! Before deleting, you can request a data export by emailing support@kamartec.online with subject "Data Export Request." We'll provide your data in a portable format within 7 days.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Do you keep any data after deletion?</div>
+          <div class="faq-answer">A: We may retain some anonymized, aggregated analytics data that cannot identify you personally, and we may retain data as required by law for legal compliance purposes. All personally identifiable information is permanently deleted.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Can I create a new account with the same email later?</div>
+          <div class="faq-answer">A: Yes! After the deletion process is complete (typically 7 days), you can create a new FocusPal account using the same email address. However, none of your previous data will be restored.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Why do you need 7 days to fully delete everything?</div>
+          <div class="faq-answer">A: Our backup systems retain data temporarily for disaster recovery. This industry-standard practice ensures we can restore service if there's a technical failure. After 7 days, all backups are purged permanently.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Q: Is this compliant with GDPR and other privacy laws?</div>
+          <div class="faq-answer">A: Yes! Our deletion process complies with GDPR, CCPA, and other major privacy regulations. You have the right to erasure, and we honor that right fully.</div>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top: 40px;">
+        <h3>💡 Need Help or Have Questions?</h3>
+        <p style="color: #2c5282; font-size: 1.05em; line-height: 1.7;">
+          If you're experiencing issues with the app, have feedback, or just need support, please contact us before deleting your account. We're here to help and would love to address any concerns you might have!
+        </p>
+        <p style="margin-top: 15px;">
+          <strong>Contact us:</strong><br>
+          📧 Email: <a href="mailto:support@kamartec.com" style="color: #667eea; text-decoration: none; font-weight: 600;">support@kamartec.com</a><br>
+          🌐 Help Center: <a href="https://support.kamartec.com" style="color: #667eea; text-decoration: none; font-weight: 600;">support.kamartec.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>FocusPal</strong> by KamarTec | Last updated: October 2025</p>
+      <div class="footer-links">
+        <a href="https://helper.kamartec.online">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support@kamartec.online">Contact Support</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
